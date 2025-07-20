@@ -74,25 +74,27 @@ namespace RabbieCoreSettings
             {
                 Key = "EnbleDrugEffectControl",
                 Label = "플라네타륨 개화 설정 활성화",
-                Description = "활성화 시 플라네타륨 개화 관련 설정을 조정할 수 있습니다.",
+                Description = "활성화 시 플라네타륨 개화 관련 설정을 조정할 수 있습니다. \n\n※ Biotech DLC가 있을 경우 플라네타륨 피로 유전자도 보유해야 적용됩니다.",
                 Type = SettingType.Toggle,
                 Getter = () => SettingsState.EnbleDrugEffectControl,
                 Setter = v => SettingsState.EnbleDrugEffectControl = v
             };
+
             var ignoreRaceRestriction = new SettingDefinition
             {
                 Key = "IgnoreRaceRestrictionForDrugEffects",
                 Label = "플라네타륨 개화 종족제한",
-                Description = "활성화 시 종족 제한 조건을 무시하고 모든 종족에 개화 가능성을 부여합니다.",
+                Description = "활성화 시 종족 제한 조건을 무시하고 모든 종족에 개화 가능성을 부여합니다.\n\n※ Biotech DLC가 있을 경우 플라네타륨 피로 유전자도 보유해야 적용됩니다.",
                 Type = SettingType.Toggle,
                 Getter = () => SettingsState.IgnoreRaceRestrictionForDrugEffects,
                 Setter = v => SettingsState.IgnoreRaceRestrictionForDrugEffects = v
             };
+
             var enableLongSightedFirstShot = new SettingDefinition
             {
                 Key = "EnableLongSightedFirstShot",
                 Label = "초탄 명중 보정 활성화",
-                Description = "개화 상태(헤디프)가 있을 때, 첫 몇 발의 명중률을 사격 기술 기반으로 보정합니다. \n\n※ Biotech DLC가 있을 경우 해당 유전자도 보유해야 적용됩니다.",
+                Description = "개화 상태(헤디프)가 있을 때, 첫 발의 명중률을 사격 기술 기반으로 보정합니다.\n신중한 사수는 버스트의 첫 3발을 보정받습니다.\n난사광은 -5%p가 보정됩니다. \n\n※ Biotech DLC가 있을 경우 선천적인 저격수 유전자도 보유해야 적용됩니다.",
                 Type = SettingType.Toggle,
                 Getter = () => SettingsState.EnableLongSightedFirstShot,
                 Setter = v => SettingsState.EnableLongSightedFirstShot = v
@@ -102,7 +104,7 @@ namespace RabbieCoreSettings
             {
                 Key = "FirstShotMinAccuracy",
                 Label = "최소 명중률 (%)",
-                Description = "사격 Lv0 기준 첫 발 명중 확률입니다.",
+                Description = "사격 Lv0 기준 첫 발 명중 확률입니다. 기본값 50%",
                 Type = SettingType.Slider,
                 SliderMin = 0f,
                 SliderMax = 100f,
@@ -114,7 +116,7 @@ namespace RabbieCoreSettings
             {
                 Key = "FirstShotMaxAccuracy",
                 Label = "최대 명중률 (%)",
-                Description = "사격 Lv20 기준 첫 발 명중 확률입니다.",
+                Description = "사격 Lv20 기준 첫 발 명중 확률입니다. 기본값 100%",
                 Type = SettingType.Slider,
                 SliderMin = 0f,
                 SliderMax = 100f,
@@ -128,7 +130,7 @@ namespace RabbieCoreSettings
                 {
                     GroupKey = "DrugEffectControl",
                     GroupLabel = "플라네타륨 개화 설정",
-                    GroupDescription = "플라네타륨 개화 효과를 조정합니다.",
+                    GroupDescription = "플라네타륨 개화 관련 설정들을 조정합니다.",
                     Section = ParentSection.Core,
                     Category = SettingCategory.Always,
                     Items = new List<SettingDefinition> {EnbleDrugEffectControl,ignoreRaceRestriction,enableLongSightedFirstShot,firstShotMinAccuracy,firstShotMaxAccuracy }

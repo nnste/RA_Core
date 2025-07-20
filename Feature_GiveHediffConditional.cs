@@ -14,9 +14,6 @@ namespace RA_Core
         {
             public HediffDef hediffDef;
             public float severity = -1f;
-            public ChemicalDef toleranceChemical;
-            private bool divideByBodySize;
-            public bool multiplyByGeneToleranceFactors;
 
             public List<ThingDef> allowedRaces;
             public List<GeneDef> requiredGenes;
@@ -48,7 +45,6 @@ namespace RA_Core
                 // 5. Hediff 적용
                 Hediff hediff = HediffMaker.MakeHediff(hediffDef, pawn);
                 float effect = (severity > 0f) ? severity : hediffDef.initialSeverity;
-                AddictionUtility.ModifyChemicalEffectForToleranceAndBodySize(pawn, toleranceChemical, ref effect, multiplyByGeneToleranceFactors, divideByBodySize);
                 hediff.Severity = effect;
                 pawn.health.AddHediff(hediff);
             }
