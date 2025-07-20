@@ -69,6 +69,73 @@ namespace RabbieCoreSettings
                 Section = ParentSection.Core,
                 Category = SettingCategory.Always
             }, null);
+
+            var EnbleDrugEffectControl = new SettingDefinition
+            {
+                Key = "EnbleDrugEffectControl",
+                Label = "플라네타륨 개화 설정 활성화",
+                Description = "활성화 시 플라네타륨 개화 관련 설정을 조정할 수 있습니다.",
+                Type = SettingType.Toggle,
+                Getter = () => SettingsState.EnbleDrugEffectControl,
+                Setter = v => SettingsState.EnbleDrugEffectControl = v
+            };
+            var ignoreRaceRestriction = new SettingDefinition
+            {
+                Key = "IgnoreRaceRestrictionForDrugEffects",
+                Label = "플라네타륨 개화 종족제한",
+                Description = "활성화 시 종족 제한 조건을 무시하고 모든 종족에 개화 가능성을 부여합니다.",
+                Type = SettingType.Toggle,
+                Getter = () => SettingsState.IgnoreRaceRestrictionForDrugEffects,
+                Setter = v => SettingsState.IgnoreRaceRestrictionForDrugEffects = v
+            };
+            var enableLongSightedFirstShot = new SettingDefinition
+            {
+                Key = "EnableLongSightedFirstShot",
+                Label = "초탄 명중 보정 활성화",
+                Description = "개화 상태(헤디프)가 있을 때, 첫 몇 발의 명중률을 사격 기술 기반으로 보정합니다. \n\n※ Biotech DLC가 있을 경우 해당 유전자도 보유해야 적용됩니다.",
+                Type = SettingType.Toggle,
+                Getter = () => SettingsState.EnableLongSightedFirstShot,
+                Setter = v => SettingsState.EnableLongSightedFirstShot = v
+            };
+
+            var firstShotMinAccuracy = new SettingDefinition
+            {
+                Key = "FirstShotMinAccuracy",
+                Label = "최소 명중률 (%)",
+                Description = "사격 Lv0 기준 첫 발 명중 확률입니다.",
+                Type = SettingType.Slider,
+                SliderMin = 0f,
+                SliderMax = 100f,
+                SliderGetter = () => SettingsState.FirstShotMinAccuracy * 100f,
+                SliderSetter = v => SettingsState.FirstShotMinAccuracy = v / 100f
+            };
+
+            var firstShotMaxAccuracy = new SettingDefinition
+            {
+                Key = "FirstShotMaxAccuracy",
+                Label = "최대 명중률 (%)",
+                Description = "사격 Lv20 기준 첫 발 명중 확률입니다.",
+                Type = SettingType.Slider,
+                SliderMin = 0f,
+                SliderMax = 100f,
+                SliderGetter = () => SettingsState.FirstShotMaxAccuracy * 100f,
+                SliderSetter = v => SettingsState.FirstShotMaxAccuracy = v / 100f
+            };
+
+
+            Registry.RegisterGroup(
+                new SettingGroup
+                {
+                    GroupKey = "DrugEffectControl",
+                    GroupLabel = "플라네타륨 개화 설정",
+                    GroupDescription = "플라네타륨 개화 효과를 조정합니다.",
+                    Section = ParentSection.Core,
+                    Category = SettingCategory.Always,
+                    Items = new List<SettingDefinition> {EnbleDrugEffectControl,ignoreRaceRestriction,enableLongSightedFirstShot,firstShotMinAccuracy,firstShotMaxAccuracy }
+                },
+                SettingsState.Expose
+            );
+
         }
     }
 }

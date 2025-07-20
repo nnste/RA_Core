@@ -75,6 +75,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Feature_CarryWeightCalculation.cs" />
+    <Compile Include="Feature_GiveHediffConditional.cs" />
+    <Compile Include="Feature_LongSightedFirstShot.cs" />
     <Compile Include="RabbieCoreSettings\SettingsRegistrar.cs" />
     <Compile Include="RabbieCoreSettings\SettingsState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

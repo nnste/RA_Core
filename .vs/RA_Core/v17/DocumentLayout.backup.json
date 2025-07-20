@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "D:\\RA_Core\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{57C58D64-AE0D-4B51-8ED0-FD1D5C33F70B}|RA_Core.csproj|D:\\RA_Core\\rabbiecoresettings\\settingsstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57C58D64-AE0D-4B51-8ED0-FD1D5C33F70B}|RA_Core.csproj|solutionrelative:rabbiecoresettings\\settingsstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{57C58D64-AE0D-4B51-8ED0-FD1D5C33F70B}|RA_Core.csproj|d:\\ra_core\\rabbiecoresettings\\settingsregistrar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{57C58D64-AE0D-4B51-8ED0-FD1D5C33F70B}|RA_Core.csproj|solutionrelative:rabbiecoresettings\\settingsregistrar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{57C58D64-AE0D-4B51-8ED0-FD1D5C33F70B}|RA_Core.csproj|d:\\ra_core\\rabbiecoresettings\\settingsstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57C58D64-AE0D-4B51-8ED0-FD1D5C33F70B}|RA_Core.csproj|solutionrelative:rabbiecoresettings\\settingsstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{57C58D64-AE0D-4B51-8ED0-FD1D5C33F70B}|RA_Core.csproj|d:\\ra_core\\feature_longsightedfirstshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57C58D64-AE0D-4B51-8ED0-FD1D5C33F70B}|RA_Core.csproj|solutionrelative:feature_longsightedfirstshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57C58D64-AE0D-4B51-8ED0-FD1D5C33F70B}|RA_Core.csproj|d:\\ra_core\\feature_givehediffconditional.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57C58D64-AE0D-4B51-8ED0-FD1D5C33F70B}|RA_Core.csproj|solutionrelative:feature_givehediffconditional.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57C58D64-AE0D-4B51-8ED0-FD1D5C33F70B}|RA_Core.csproj|d:\\ra_core\\feature_carryweightcalculation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57C58D64-AE0D-4B51-8ED0-FD1D5C33F70B}|RA_Core.csproj|solutionrelative:feature_carryweightcalculation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +30,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SettingsState.cs",
-              "DocumentMoniker": "D:\\RA_Core\\RabbieCoreSettings\\SettingsState.cs",
-              "RelativeDocumentMoniker": "RabbieCoreSettings\\SettingsState.cs",
-              "ToolTip": "D:\\RA_Core\\RabbieCoreSettings\\SettingsState.cs",
-              "RelativeToolTip": "RabbieCoreSettings\\SettingsState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Feature_LongSightedFirstShot.cs",
+              "DocumentMoniker": "D:\\RA_Core\\Feature_LongSightedFirstShot.cs",
+              "RelativeDocumentMoniker": "Feature_LongSightedFirstShot.cs",
+              "ToolTip": "D:\\RA_Core\\Feature_LongSightedFirstShot.cs",
+              "RelativeToolTip": "Feature_LongSightedFirstShot.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAgwAkAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-20T05:58:43.307Z",
+              "WhenOpened": "2025-07-20T07:53:53.553Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
+              "Title": "Feature_CarryWeightCalculation.cs",
+              "DocumentMoniker": "D:\\RA_Core\\Feature_CarryWeightCalculation.cs",
+              "RelativeDocumentMoniker": "Feature_CarryWeightCalculation.cs",
+              "ToolTip": "D:\\RA_Core\\Feature_CarryWeightCalculation.cs",
+              "RelativeToolTip": "Feature_CarryWeightCalculation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-20T06:44:18.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Feature_GiveHediffConditional.cs",
+              "DocumentMoniker": "D:\\RA_Core\\Feature_GiveHediffConditional.cs",
+              "RelativeDocumentMoniker": "Feature_GiveHediffConditional.cs",
+              "ToolTip": "D:\\RA_Core\\Feature_GiveHediffConditional.cs",
+              "RelativeToolTip": "Feature_GiveHediffConditional.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-20T06:44:52.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "SettingsRegistrar.cs",
               "DocumentMoniker": "D:\\RA_Core\\RabbieCoreSettings\\SettingsRegistrar.cs",
               "RelativeDocumentMoniker": "RabbieCoreSettings\\SettingsRegistrar.cs",
               "ToolTip": "D:\\RA_Core\\RabbieCoreSettings\\SettingsRegistrar.cs",
               "RelativeToolTip": "RabbieCoreSettings\\SettingsRegistrar.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAcwC0AAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAYwE4AAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-20T05:58:39.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SettingsState.cs",
+              "DocumentMoniker": "D:\\RA_Core\\RabbieCoreSettings\\SettingsState.cs",
+              "RelativeDocumentMoniker": "RabbieCoreSettings\\SettingsState.cs",
+              "ToolTip": "D:\\RA_Core\\RabbieCoreSettings\\SettingsState.cs",
+              "RelativeToolTip": "RabbieCoreSettings\\SettingsState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwsAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-20T05:58:43.307Z",
               "EditorCaption": ""
             },
             {
