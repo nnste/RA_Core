@@ -15,8 +15,8 @@ namespace RabbieCoreSettings
             var enableCarry = new SettingDefinition
             {
                 Key = "EnableCarryWeight",
-                Label = "휴대중량 계산 패치 활성화",
-                Description = "기본 중량 계산을 덮어써서 크기 기반 휴대량 공식을 적용합니다.",
+                Label = "운반무게 계산 패치 활성화",
+                Description = "기본 계산을 덮어써서 크기 및 운반수량 기반 운반무게 공식을 적용합니다.",
                 Type = SettingType.Toggle,
                 Getter = () => SettingsState.EnableCarryWeight,
                 Setter = v => SettingsState.EnableCarryWeight = v
@@ -26,7 +26,7 @@ namespace RabbieCoreSettings
             {
                 Key = "ExcludeMechWeaponWeight",
                 Label = "메카노이드 무기 무게 제외",
-                Description = "메카노이드 장착 무기의 무게를 휴대중량 계산에서 제외합니다.",
+                Description = "메카노이드 장착 무기의 무게를 휴대중량 계산에서 제외합니다.(ex.미호메카)",
                 Type = SettingType.Toggle,
                 Getter = () => SettingsState.ExcludeMechWeaponWeight,
                 Setter = v => SettingsState.ExcludeMechWeaponWeight = v
@@ -37,7 +37,7 @@ namespace RabbieCoreSettings
                 {
                     GroupKey = "CarryWeight",
                     GroupLabel = "휴대중량 계산",
-                    GroupDescription = "몸 크기와 운반용량으로 Carrying Capacity를 다시 계산합니다.",
+                    GroupDescription = "몸크기와 운반수량으로 운반무게를 다시 계산합니다.",
                     Section = ParentSection.Core,
                     Category = SettingCategory.Always,
                     Items = new List<SettingDefinition> { enableCarry, excludeWeapon }
