@@ -15,8 +15,8 @@ namespace RabbieCoreSettings
             var enableCarry = new SettingDefinition
             {
                 Key = "EnableCarryWeight",
-                Label = "운반무게 계산 패치 활성화",
-                Description = "기본 계산을 덮어써서 크기 및 운반수량 기반 운반무게 공식을 적용합니다.",
+                Label = "<i>휴대중량 계산 변화 활성화</i>",
+                Description = "기존의 몸크기만을 기반으로 한 휴대중량 방식에서 크기 및 운반수량 기반 휴대중량 공식으로 적용합니다.",
                 Type = SettingType.Toggle,
                 Getter = () => SettingsState.EnableCarryWeight,
                 Setter = v => SettingsState.EnableCarryWeight = v
@@ -37,7 +37,7 @@ namespace RabbieCoreSettings
                 {
                     GroupKey = "CarryWeight",
                     GroupLabel = "휴대중량 계산",
-                    GroupDescription = "몸크기와 운반수량으로 운반무게를 다시 계산합니다.",
+                    GroupDescription = "몸크기와 운반수량으로 휴대중량을 다시 계산합니다.",
                     Section = ParentSection.Core,
                     Category = SettingCategory.Always,
                     Items = new List<SettingDefinition> { enableCarry, excludeWeapon }
@@ -73,8 +73,8 @@ namespace RabbieCoreSettings
             var EnbleDrugEffectControl = new SettingDefinition
             {
                 Key = "EnbleDrugEffectControl",
-                Label = "플라네타륨 개화 설정 활성화",
-                Description = "활성화 시 플라네타륨 개화 관련 설정을 조정할 수 있습니다. \n\n※ Biotech DLC가 있을 경우 플라네타륨 피로 유전자도 보유해야 적용됩니다.",
+                Label = "<i>플라네타륨 개화 조정</i>",
+                Description = "활성화 시 보호된 플라네타륨 개화 관련 설정을 조정할 수 있습니다. \n\n※ Biotech DLC가 있을 경우 플라네타륨 피로 유전자도 보유해야 개화됩니다.",
                 Type = SettingType.Toggle,
                 Getter = () => SettingsState.EnbleDrugEffectControl,
                 Setter = v => SettingsState.EnbleDrugEffectControl = v
@@ -84,7 +84,7 @@ namespace RabbieCoreSettings
             {
                 Key = "IgnoreRaceRestrictionForDrugEffects",
                 Label = "플라네타륨 개화 종족제한",
-                Description = "활성화 시 종족 제한 조건을 무시하고 모든 종족에 개화 가능성을 부여합니다.\n\n※ Biotech DLC가 있을 경우 플라네타륨 피로 유전자도 보유해야 적용됩니다.",
+                Description = "활성화 시 종족 제한 조건을 무시하고 모든 종족에 개화 가능성을 부여합니다.\n\n※ Biotech DLC가 있을 경우 플라네타륨 피로 유전자도 보유해야 개화됩니다.",
                 Type = SettingType.Toggle,
                 Getter = () => SettingsState.IgnoreRaceRestrictionForDrugEffects,
                 Setter = v => SettingsState.IgnoreRaceRestrictionForDrugEffects = v
@@ -94,7 +94,11 @@ namespace RabbieCoreSettings
             {
                 Key = "EnableLongSightedFirstShot",
                 Label = "초탄 명중 보정 활성화",
-                Description = "개화 상태(헤디프)가 있을 때, 첫 발의 명중률을 사격 기술 기반으로 보정합니다.\n신중한 사수는 버스트의 첫 3발을 보정받습니다.\n난사광은 -5%p가 보정됩니다. \n\n※ Biotech DLC가 있을 경우 선천적인 저격수 유전자도 보유해야 적용됩니다.",
+                Description = "개화 상태(헤디프)가 있을 때, 첫 발의 명중률을 사격 기술 기반으로 보정합니다.\n" 
+                              + "고정된 명중률 값에 따라 명중 성공시 필중하며,\n"
+                              + " 고정명중률 값에서 명중 실패시 바닐라 명중식으로 새로 계산됩니다.\n"
+                              +"(즉 최저값이여도 최소한의 명중률을 보장함)\n"
+                              + "신중한 사수는 버스트의 첫 3발을 보정받습니다.\n난사광은 -5%p가 보정됩니다. \n\n※ Biotech DLC가 있을 경우 선천적인 저격수 유전자도 보유해야 적용됩니다.",
                 Type = SettingType.Toggle,
                 Getter = () => SettingsState.EnableLongSightedFirstShot,
                 Setter = v => SettingsState.EnableLongSightedFirstShot = v
@@ -129,7 +133,7 @@ namespace RabbieCoreSettings
                 new SettingGroup
                 {
                     GroupKey = "DrugEffectControl",
-                    GroupLabel = "플라네타륨 개화 설정",
+                    GroupLabel = "플라네타륨 개화",
                     GroupDescription = "플라네타륨 개화 관련 설정들을 조정합니다.",
                     Section = ParentSection.Core,
                     Category = SettingCategory.Always,
